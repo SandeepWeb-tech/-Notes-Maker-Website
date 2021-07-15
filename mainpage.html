@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Home Page</title>
+    <script src="main.js" defer></script>
+
+    <style>
+       .fa{
+pointer-events: none;
+       }
+       #allist{
+           display: flex;
+           flex-direction: row;
+           margin: 0 auto;
+           flex-wrap: wrap;
+          
+           
+       }
+        .area{
+            
+            margin: 15px;
+        }
+        .msgContainer{
+            
+            width: 500px;
+            margin: 5px;
+            border: 1px dotted #0A1931;
+        }
+       
+        
+        .nav{
+            position: relative;
+            margin-top: 10px;
+
+        }
+            .left{
+                position: absolute;
+                right: 2px;
+            }
+            .mainclear{
+                clear: both;
+            }
+            .mainheads{
+                color: #171010;
+            }
+            .par{
+                color: #2B2B2B;
+            }
+            .inputarea{
+                display: flex;
+                flex-direction: column;
+            }
+             
+            input{
+                height: 40px;
+            }
+            textarea{
+                height: 460px;
+                margin-top: 10px;
+            }
+            input,textarea{
+                border-radius: 2px;
+                outline: none;
+              
+            }
+            .butt{
+                margin-top: 10px;
+            }
+            .articles{ 
+               margin-top: 30px;
+             
+            }
+            .card-text{
+               
+                height: 90px;
+                overflow: hidden;
+            }
+            .uper{
+                margin-top: 30px;
+            }
+            .para{
+                height: 80px;
+                overflow: hidden;
+            }
+            .mainheads{
+                position: sticky;
+                
+            }
+            
+    </style>
+</head>
+<body>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Add New Notes</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="" class="inputarea">
+                  <input type="text" placeholder="Heading" autocomplete="off" id="data" required>
+                 
+                  <textarea name="" id="datamsg" required></textarea>
+
+              </form>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="addItem();">Save</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+    <div class="mainhead">
+        <div class="section">
+            <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Notes Maker</a>
+                </li>
+               
+                <li class="nav-item left">
+                    <a href="" class="nav-link"  data-toggle="modal" data-target="#myModal">Add <i class="fa fa-plus" aria-hidden="true"></i></a>
+                </li>
+
+                <!--<li class="nav-item dropdown left">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Add <i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Link 1</a>
+                      <a class="dropdown-item" href="#">Link 2</a>
+                      <a class="dropdown-item" href="#">Link 3</a>
+                      <a href="" class="dropdown-item">Add Categories</a>
+                    </div>
+                  </li>-->
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="mainclear"></div>
+
+    <div class="articles">
+        <div class="container" id="allist">
+            
+            <!--<div class="area">
+                <h2>Hii am surya</h2>
+                <div class="para">
+                    <p> quia illum cupiditate rem beatae? Non aliquid molestias repudiandae dignissimos voluptatem.</p>
+                </div>
+                <div class="butt">
+                    <button class="btn btn-primary"><i class="fa fa-book" aria-hidden="true"></i></button>
+                <button class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <button class="btn btn-danger" id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="area">
+                <h2>Hii am surya</h2>
+                <div class="para">
+                    <p> quia illum cupiditate rem beatae? Non aliquid molestias repudiandae dignissimos voluptatem.</p>
+                </div>
+                <div class="butt">
+                    <button class="btn btn-primary"><i class="fa fa-book" aria-hidden="true"></i></button>
+                <button class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                <button class="btn btn-danger" id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        -->
+        </div>
+    </div>
+
+
+
+<style>
+    .show{
+        position: absolute;
+        top:20px;
+   
+     width: 100%;
+        
+        transition: 3s ease-in;
+       
+    }
+   .fullshow{
+       width: 80%;
+       margin 0 auto;
+       border: 1px solid black;
+   }
+    </style>
+    <div class="show" id="showme">
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
